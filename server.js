@@ -11,6 +11,7 @@ const app = express();
 
 // Routes
 const users = require('./routes/users');
+const cars = require('./routes/cars');
 
 // Middlewares
 app.use(logger('dev'));
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/api/users', users);
+app.use('/api/cars', cars);
 
 // Catch 404 errors and forword them to error handler
 app.use((req, res, next) => {

@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const carSchema = new Schema({
 	make: String,
 	model: String,
-	yesr: Number,
+	year: Number,
 	seller: {
 		type: Schema.Types.ObjectId,
 		ref: 'user'
