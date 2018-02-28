@@ -9,7 +9,8 @@ mongoose.connect('mongodb://localhost/mydb');
 
 const app = express();
 
-// Routes
+// Include Routes
+const auth = require('./routes/auth');
 const users = require('./routes/users');
 const cars = require('./routes/cars');
 
@@ -18,7 +19,8 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Routes
+// Use Routes
+app.use('/api/auth', auth);
 app.use('/api/users', users);
 app.use('/api/cars', cars);
 
