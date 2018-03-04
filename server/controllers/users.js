@@ -6,14 +6,19 @@ signToken = user => {
   return JWT.sign({
     iss: 'Hemant',
     sub: user.id,
-    username: user.email,
-    admin: user.admin,
+    username: user.local.email,
+    admin: user.local.admin,
     iat: new Date().getTime(), // current time
     exp: new Date().setDate(new Date().getDate() + 1) // current time + 1 day ahead
   }, JWT_SECRET);
 }
 
 module.exports = {
+  index: async (req, res, next ) => {
+    const users = await User.find({});
+    res.status(200).json(users);
+  },
+
   signUp: async (req, res, next) => {
     const { email, password, admin } = req.value.body;
 

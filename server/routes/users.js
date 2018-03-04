@@ -24,10 +24,6 @@ router.route('/secret')
   .get(passportJWT, UsersController.secret);
 
 router.route('/')
-  .get((req, res) => {
-    res.json({
-      message: 'Access to all :)'
-    });
-  });
+  .get(UsersController.index);
 
 module.exports = router;
