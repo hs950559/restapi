@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 mongoose.Promise = global.Promise;
 if (process.env.NODE_ENV === 'test') {
@@ -12,7 +13,10 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 const app = express();
-// Middlewares moved morgan into if for clear tests
+
+// Middlewares
+app.use(cors());
+
 if (!process.env.NODE_ENV === 'test') {
   app.use(morgan('dev'));
 }
