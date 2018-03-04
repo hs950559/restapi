@@ -8,8 +8,8 @@ mongoose.Promise = global.Promise;
 if (process.env.NODE_ENV === 'test') {
   mongoose.connect('mongodb://localhost/APIAuthenticationTEST', { useMongoClient: true });
 } else {
-  mongoose.connect('mongodb://localhost/APIAuthentication', { useMongoClient: true });
-  // mongoose.connect('mongodb://hemant:123@ds255768.mlab.com:55768/apiauth', { useMongoClient: true });
+  // mongoose.connect('mongodb://localhost/APIAuthentication', { useMongoClient: true });
+  mongoose.connect('mongodb://hemant:123@ds255768.mlab.com:55768/apiauth', { useMongoClient: true });
 }
 
 const app = express();
