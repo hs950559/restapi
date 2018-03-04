@@ -3,6 +3,50 @@
 This project uses async/await it would be best if you use **node 8+**
 after checkout be sure to run
 
+## Demo
+
+```
+// public (GET)
+https://mighty-beach-55711.herokuapp.com/users
+
+// signup (POST)
+https://mighty-beach-55711.herokuapp.com/users/signup
+
+// Signin (POST)
+https://mighty-beach-55711.herokuapp.com/users/signin
+
+// Google Auth (POST)
+https://mighty-beach-55711.herokuapp.com/users/oauth/google
+
+// Facebook Auth (POST)
+https://mighty-beach-55711.herokuapp.com/users/oauth/facebook
+
+// Access Protected Resource (GET)
+https://mighty-beach-55711.herokuapp.com/users/secret
+```
+
+## In Dev env
+
+```
+// public (GET)
+https://localhost:3000/users
+
+// signup (POST)
+https://localhost:3000/users/signup
+
+// Signin (POST)
+https://localhost:3000/users/signin
+
+// Google Auth (POST)
+https://localhost:3000/users/oauth/google
+
+// Facebook Auth (POST)
+https://localhost:3000/users/oauth/facebook
+
+// Access Protected Resource (GET)
+https://localhost:3000/users/secret
+```
+
 ```bash
 $ npm install
 ```
