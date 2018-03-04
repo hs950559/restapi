@@ -4,8 +4,10 @@ const { JWT_SECRET } = require('../configuration');
 
 signToken = user => {
   return JWT.sign({
-    iss: 'CodeWorkr',
+    iss: 'Hemant',
     sub: user.id,
+    username: user.email,
+    admin: user.admin,
     iat: new Date().getTime(), // current time
     exp: new Date().setDate(new Date().getDate() + 1) // current time + 1 day ahead
   }, JWT_SECRET);

@@ -6,6 +6,13 @@ after checkout be sure to run
 ## Demo
 
 ```
+// Admin User
+hemant@gmail.com/123
+// Non admin user
+public@gmail.com/123
+```
+
+```
 // public (GET)
 https://hkauthapi.herokuapp.com/users
 
