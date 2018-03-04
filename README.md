@@ -54,17 +54,58 @@ $ yarn text-report
 
 ## Resources
 
-Google-
+# Postman Workflow
+
+## Local Auth
+
+**Request Payload**
+![Signup](img/signup.png)
+
+**Response**
+![Access Protected Resource](img/access-secret.png)
+
+
+## Google Auth
+
+**Step1**
+https://developers.google.com/oauthplayground
+
+![Step1](img/google-auth-step1.png)
+
+**Step2**
+![Get Token](img/get-token.png)
+
+**Step3**
+![Submit Payload](img/submit-payload.png)
+
+**Step4**
+![Access Protected Resource](img/access-secret.png)
+
+
+## Facebook Auth
+
+**Step1**
+https://developers.facebook.com/tools/accesstoken/
+
+![Step1](img/get-fb-token.png)
+
+**Step2**
+![Submit Payload](img/fb-payload.png)
+
+**Step3**
+![Access Protected Resource](img/access-secret.png)
+
+=========================================================
 
 get access_token
 
 https://developers.google.com/oauthplayground/?code=4/AADfZ3YC-Y3srgKwBzq3qZrZTibnMzzSi7DD26qWcNen8bcTkK8Y8jPyfUkI5toR9kBorbQeVXx7rurKsw2XYkU#
 
-Get API key b Secret
+Get API key & Secret
 https://console.developers.google.com/apis/credentials?project=nodeapiauth
 
-** Create FB App
+** Create FB App**
 https://developers.facebook.com
 
-** Access token
+** Access token**
 https://developers.facebook.com/tools/accesstoken/

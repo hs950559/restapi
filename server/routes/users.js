@@ -23,4 +23,11 @@ router.route('/oauth/facebook')
 router.route('/secret')
   .get(passportJWT, UsersController.secret);
 
+router.route('/')
+  .get((req, res) => {
+    res.json({
+      message: 'Access to all :)'
+    });
+  });
+
 module.exports = router;
