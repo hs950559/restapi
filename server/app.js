@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'test') {
   mongoose.connect('mongodb://localhost/APIAuthenticationTEST', { useMongoClient: true });
 } else {
   // mongoose.connect('mongodb://localhost/APIAuthentication', { useMongoClient: true });
-  mongoose.connect('mongodb://hemant:123@ds255768.mlab.com:55768/apiauth', { useMongoClient: true });
+  mongoose.connect('mongodb://hemant:123@ds255768.mlab.com:55768/apiauth', { useMongoClient: true }).then(() => console.log('Connected to mLab'));
 }
 
 const app = express();
@@ -25,25 +25,26 @@ app.use(bodyParser.json());
 
 // Use Routes
 app.use('/users', require('./routes/users'));
+app.use('/books', require('./routes/books'));
 
 // Global Error Handling
 // Catch 404 errors and forword them to error handler
-app.use((req, res, next) => {
-	const err = new Error('Not Found');
-	err.status = 404;
-	next(err);
-});
+// app.use((req, res, next) => {
+// 	const err = new Error('Not Found');
+// 	err.status = 404;
+// 	next(err);
+// });
 
-// Error handler
-app.use((err, req, res, next) => {
-	const error = app.get('env') === 'dev' ? err : {};
-	const status = error.status || 500;
+// // Error handler
+// app.use((err, req, res, next) => {
+// 	const error = app.get('env') === 'dev' ? err : {};
+// 	const status = error.status || 500;
 
-	res.status(status).json({
-		error: {
-			message: error.message
-		}
-	});
-});
+// 	res.status(status).json({
+// 		error: {
+// 			message: error.message
+// 		}
+// 	});
+// });
 
 module.exports = app;

@@ -160,3 +160,13 @@ https://developers.facebook.com
 
 ** Access token**
 https://developers.facebook.com/tools/accesstoken/
+
+
+## Books CRUD API
+
+```
+// pagination
+http://localhost:3000/books/:skip/:top
+http://localhost:3000/books/1/2
+
+```
