@@ -7,9 +7,9 @@ after checkout be sure to run
 
 ```
 // Admin User
-superman@gmail.com/123
+dady@gmail.com/123
 // Non admin user
-superwomen@gmail.com/123
+kid@gmail.com/123
 ```
 
 ```
